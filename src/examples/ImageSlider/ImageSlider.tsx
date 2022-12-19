@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import './ImageSlider.css'
 
 const ImageSlider = () => {
-
-  const [percent, setPercent] = useState(100)
 
   const imageRef= useRef<HTMLDivElement>(null);
 
@@ -23,9 +21,17 @@ const ImageSlider = () => {
             nextPercentageUnlimited = percentage + parseFloat(imageRef.current.dataset.currentpercent!),
             nextPercentage = Math.max(Math.min(nextPercentageUnlimited, 0), -100);
 
-      setPercent(100 + nextPercentage)
       imageRef.current.dataset.percent = nextPercentage.toString();
-      imageRef.current.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+      for (let i = 0; i < imageRef.current.children.length; i++) {
+        imageRef.current.children[i].animate({
+          objectPosition:`${100 + nextPercentage}% 50%`
+        }, {duration: 1200, fill: "forwards"})
+      }
+      
+      imageRef.current.animate({
+        transform: `translate(${nextPercentage}%, -50%`
+      }, {duration: 1200, fill: "forwards"})
       
     }
   }
@@ -40,14 +46,14 @@ const ImageSlider = () => {
   return (
     <div className="content">
       <div className="imageContainer" ref={imageRef} data-mousedownat="0" data-currentpercent="0">
-        <img src="https://images.pexels.com/photos/5374862/pexels-photo-5374862.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/3705368/pexels-photo-3705368.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/4492736/pexels-photo-4492736.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/5326909/pexels-photo-5326909.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/7031674/pexels-photo-7031674.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/3685175/pexels-photo-3685175.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/2563854/pexels-photo-2563854.jpeg?auto=compress&cs=tinysrgb&w=400" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
-        <img src="https://images.pexels.com/photos/5846907/pexels-photo-5846907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style={{objectPosition:`${percent}% 50%`}}alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/5374862/pexels-photo-5374862.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/5326909/pexels-photo-5326909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/1910225/pexels-photo-1910225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/5022849/pexels-photo-5022849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/169677/pexels-photo-169677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
+        <img src="https://images.pexels.com/photos/210158/pexels-photo-210158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" draggable="false"/>
       </div>
     </div>
   )
