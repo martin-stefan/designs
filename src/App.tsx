@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Directory/>}/>
         {
           items.map(el => (
-            <Route path={`/${el.title}`} element={el.component}/>
+            <Route path={`/${el.title}`} element={el.component} key={el.title}/>
           ))
         }
 

@@ -4,10 +4,10 @@ import { items } from './items';
 
 const Directory = () => {
   return (
-    <div>
+    <div className="directory">
       {
         items.map(el => (
-          <Link to={`/${el.title}`}>{el.title}</Link>
+          <Link to={`/${el.title}`} key={el.title}>{el.title}</Link>
         ))
       }
     </div>
