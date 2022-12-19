@@ -5,13 +5,13 @@ const ImageSlider = () => {
 
   const imageRef= useRef<HTMLDivElement>(null);
 
-  window.onmousedown = e => {
+  const handleDown = (e:MouseEvent | Touch) => {
     if (imageRef.current) {
       imageRef.current.dataset.mousedownat = e.clientX.toString();
     }
   }
 
-  window.onmousemove = e => {
+  const handleMove = (e:MouseEvent | Touch) => {
     if (imageRef.current && imageRef.current.dataset.mousedownat !== "0") {
 
       const mouseDelta = parseFloat(imageRef.current.dataset.mousedownat!) - e.clientX, 
@@ -36,12 +36,19 @@ const ImageSlider = () => {
     }
   }
 
-  window.onmouseup = e => {
+  const handleUp = () => {
     if (imageRef.current) {
       imageRef.current.dataset.mousedownat = "0";
       imageRef.current.dataset.currentpercent = imageRef.current.dataset.percent;
     }
   }
+
+  window.onmousedown = e => handleDown(e)
+  window.onmousemove = e => handleMove(e)
+  window.onmouseup = e => handleUp()
+  window.ontouchstart = e => handleDown(e.touches[0])
+  window.ontouchmove = e => handleMove(e.touches[0])
+  window.ontouchend = e => handleUp()
   
   return (
     <div className="content">
