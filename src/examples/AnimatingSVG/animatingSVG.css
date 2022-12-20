@@ -1,7 +1,7 @@
 #myscribble {
   stroke-dasharray: 4576;
   stroke-dashoffset: 4576;
-  animation: draw 4s ease;
+  animation: draw 4s ease infinite;
   animation-fill-mode: forwards;
 }
 
