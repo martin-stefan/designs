@@ -31,7 +31,7 @@ export const items = [
   },
   {
     component: <ScrollingSVG/>,
-    title: "Scrollimg with an svg",
+    title: "Scrolling with an svg",
     description: "",
     process: "Create an svg, set dasharray to length of svg, set dash offset to length of svg, animate dashoffset",
     sourceUrl: "",

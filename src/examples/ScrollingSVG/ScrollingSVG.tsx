@@ -3,7 +3,7 @@ import {ReactComponent as Scribble} from './scribble.svg';
 
 const ScrollingSVG = () => {
 
-  const scribbleRef:any = useRef(null)
+  const scribbleRef= useRef<SVGSVGElement>(null)
 
   window.onscroll = e => {
     if (scribbleRef.current) {
