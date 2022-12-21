@@ -1,6 +1,7 @@
 import AnimatingSVG from "../examples/AnimatingSVG/AnimatingSVG";
 import ScrollingSVG from "../examples/ScrollingSVG/ScrollingSVG";
 import ImageSlider from "../examples/ImageSlider/ImageSlider";
+import AnimatedNav from "../examples/AnimatedNav/AnimatedNav";
 
 export const items = [
   {
@@ -35,6 +36,19 @@ export const items = [
     description: "",
     process: "Create an svg, set dasharray to length of svg, set dash offset to length of svg, animate dashoffset",
     sourceUrl: "",
+    learningOutcomes: [
+      {
+        title: "",
+        link: ""
+      }
+    ]
+  },
+  {
+    component: <AnimatedNav/>,
+    title: "Nav bar animation",
+    description: "",
+    process: "",
+    sourceUrl: "https://codepen.io/abxlfazl/pen/VwKzaEm",
     learningOutcomes: [
       {
         title: "",
