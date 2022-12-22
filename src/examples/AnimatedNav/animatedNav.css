@@ -1,6 +1,6 @@
 .navbar {
   background-color: #181818;
-  width: 400px;
+  width: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -10,13 +10,53 @@
 .navBtn {
   background-color: transparent;
   border: none;
+  padding: 1rem;
+}
+
+.navBtn--active {
+  transform: translateY(-1rem);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+  animation: buttonAnimation .4s ease-in-out;
+}
+
+@keyframes buttonAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(-1rem) scale(1);
+  }
+
 }
 
 .icon {
   stroke: #fff;
-  height: 40px;
+  stroke-dasharray: 400;
+  height: 60px;
+  fill: transparent;
+}
+
+.navBtn--active > .icon {
+  stroke-dashoffset: 0;
+  animation: iconAnimation 1.5s reverse;
+}
+
+@keyframes iconAnimation {
+  to {
+    stroke-dashoffset: 400;
+  }
 }
 
 .icon:hover {
   cursor: pointer;
+}
+
+.svg-container {
+  width: 0;
+  height: 0;
 }
