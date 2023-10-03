@@ -7,7 +7,10 @@ const Directory = () => {
     <div className="directory">
       {
         items.map(el => (
-          <Link to={`/${el.title}`} key={el.title}>{el.title}</Link>
+          <div className="directory__item">
+
+            <Link to={`/${el.title}`} key={el.title}>{el.title}</Link>
+          </div>
         ))
       }
     </div>

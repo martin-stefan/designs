@@ -7,6 +7,7 @@ export const items = [
     component: <ImageSlider/>,
     title: "Image Slider",
     description: "",
+    date: "",
     process: "",
     sourceUrl: "https://www.youtube.com/watch?v=PkADl0HubMY",
     learningOutcomes: [
@@ -20,6 +21,7 @@ export const items = [
     component: <AnimatingSVG/>,
     title: "Animating an SVG",
     description: "",
+    date: "",
     process: "Create an svg, set dasharray to length of svg, set dash offset to length of svg, animate dashoffset",
     sourceUrl: "https://www.tiktok.com/@fireship_dev/video/7175906523917634862?_r=1&_t=8YJTwn6wGQo&is_from_webapp=v1&item_id=7175906523917634862",
     learningOutcomes: [
@@ -33,6 +35,7 @@ export const items = [
     component: <ScrollingSVG/>,
     title: "Scrolling with an svg",
     description: "",
+    date: "",
     process: "Create an svg, set dasharray to length of svg, set dash offset to length of svg, animate dashoffset",
     sourceUrl: "",
     learningOutcomes: [
