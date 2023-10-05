@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
 
-      <Link to="/" className="homeBtn">Home</Link>
+      <Link to="/" className="homeBtn"><p>Home</p></Link>
       <Routes>
         <Route path="/" element={<Home/>}/>
         {

@@ -8,13 +8,15 @@ const Home = () => {
         <section>
           <h1>Introduction</h1>
           <ul>
-            <li>Github</li>
-            <li>Portfolio</li>
-            <li>LinkedIn</li>
+            <li><a href="" target="_new">GitHub</a></li>
+            <li><a href="" target="_new">Portfolio</a></li>
+            <li><a href="" target="_new">LinkedIn</a></li>
           </ul>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laudantium vero voluptatem earum recusandae in magnam maxime, distinctio maiores architecto deleniti optio corrupti atque, illo commodi? Voluptas voluptatum dolore asperiores!
-          Eius rem facere odio officiis velit pariatur est architecto incidunt officia, quibusdam repudiandae autem hic blanditiis dicta voluptatem labore, ipsa minus impedit accusantium commodi suscipit nihil eligendi dolor? Necessitatibus, incidunt!</p>
+          <p>
+            The purpose of this project is to track my progress as I experiment and learn new things
+            with CSS and try out new designs. 
+          </p>
 
           <h2>Insprations</h2>
           <p>This website, that website</p>
@@ -25,12 +27,12 @@ const Home = () => {
 
 
       <footer>
-        You have reached the end of the page
+        <p>You have reached the end of the page</p>
         <a href="#">Back to top</a>
         <ul>
-            <li>Github</li>
-            <li>Portfolio</li>
-            <li>LinkedIn</li>
+            <li><a href="" target="_new">GitHub</a></li>
+            <li><a href="" target="_new">Portfolio</a></li>
+            <li><a href="" target="_new">LinkedIn</a></li>
           </ul>
       </footer>
     </div>
