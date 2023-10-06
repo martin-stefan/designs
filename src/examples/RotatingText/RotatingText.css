@@ -1,0 +1,36 @@
+.rotating__container {
+  display: block;
+  transform: scaleY(1);
+}
+
+.rotating__container:hover > * {
+  transform: scaleY(0);
+  transition: all 1s ease-in-out;
+}
+
+.rotating_letter {
+  font-size: 60px;
+  color: white;
+  display: inline-block;
+  transform-origin: top;
+}
+
+.rotating__container--grow {
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 25%;
+  /* background-color: #fff; */
+}
+
+.rotating_letter--grow {
+  font-size: 60px;
+  color: white;
+  display: inline-block;
+  transform-origin: bottom;
+}
+
+.rotating__container:hover + .rotating__container--grow{
+  transform: scaleY(1.1);
+}

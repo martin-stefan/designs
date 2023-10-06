@@ -1,6 +1,7 @@
 import AnimatingSVG from "../examples/AnimatingSVG/AnimatingSVG";
 import ScrollingSVG from "../examples/ScrollingSVG/ScrollingSVG";
 import ImageSlider from "../examples/ImageSlider/ImageSlider";
+import RotatingText from "../examples/RotatingText/RotatingText";
 
 export const items = [
   {
@@ -37,6 +38,20 @@ export const items = [
     description: "",
     date: "",
     process: "Create an svg, set dasharray to length of svg, set dash offset to length of svg, animate dashoffset",
+    sourceUrl: "",
+    learningOutcomes: [
+      {
+        title: "",
+        link: ""
+      }
+    ]
+  },
+  {
+    component: <RotatingText/>,
+    title: "Rotating Text",
+    description: "",
+    date: "",
+    process: "",
     sourceUrl: "",
     learningOutcomes: [
       {
